@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>28NewGodFlow</title>
+        <title>29NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -25,19 +25,7 @@
       }
 </style>
     
-        <script>    
-        AFRAME.registerComponent('markerhandler1', {
-         tick:function() {
-         if(document.querySelector("#animated-marker1").object3D.visible == true) {
-
-         document.getElementById("div").textContent = "MARKER1"; 
-         } else {
-
-         document.getElementById("div").textContent = ""; 
-      }
-   }
-});
-           
+        <script>             
         AFRAME.registerComponent('markerhandler2', {
          tick:function() {
          if(document.querySelector("#animated-marker2").object3D.visible == true) {
@@ -48,7 +36,18 @@
       }
    }
 });
-            
+          
+         AFRAME.registerComponent('markerhandler1', {
+         tick:function() {
+         if(document.querySelector("#animated-marker1").object3D.visible == true) {
+
+         document.getElementById("div").textContent = "MARKER1"; 
+         } else {
+
+         document.getElementById("div").textContent = ""; 
+      }
+   }
+});
        
         
 </script>
