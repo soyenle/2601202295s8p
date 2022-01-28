@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>12NewGodFlow</title>
+        <title>13NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -29,15 +29,11 @@
         <script>    
         AFRAME.registerComponent('event', {
         init: function () {
-        document.getElementById("div").style.visibility="hidden";  
+        document.getElementById("div").textContent = "<center>Apfel Bein Stein Stuhl Gold Auto Prüfung DNA Flasche Türkei Fenster</center>"; 
         }
         });
         
-        function myFunction(a) {
-        document.getElementById("div").textContent = "<center>Apfel Bein Stein Stuhl Gold Auto Prüfung DNA Flasche Türkei Fenster</center>";
-        }
         
-        myFunction(a);
             
        
         
@@ -83,7 +79,7 @@
                     gltf-model="#animated-asset"
                     class="clickable"
                     gesture-handler
-                    
+                    event
                 ></a-entity>
                 
                 
