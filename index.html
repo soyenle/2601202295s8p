@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>2 NewGodFlow</title>
+        <title>3 NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -79,7 +79,9 @@ function Quiz() {
         <div class="fixed" id = "div"></div>
        <a href="https://forms.gle/sCLAGZSEfJ1sRg6f6" class="button-instructions">Sample Button</a>
 
-      <a onclick = "Instructions()" class="button-quiz">Sample Button</a>
+      <div class="button-quiz">
+     <button class="Test" type = "button" id = "help_button" onclick = "Quiz()"> Quiz </button>
+    </div>
 	    
         <a-scene
             vr-mode-ui="enabled: false;"
