@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>4 NewGodFlow</title>
+        <title>5 NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -43,7 +43,18 @@
         border-radius: 10px;
         background: #b3ccff;       
 }
-
+    .buttons {
+      position: absolute;
+      bottom: 10%;
+      left: 0%;
+      width: 25%;
+      height: 5em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 10;
+    }
+	    
 </style>
     
         <script>             
@@ -72,6 +83,10 @@ function Quiz() {
     
     
     <body style="margin: auto; overflow: hidden;">
+	    
+	    <div class="buttons">
+     <button class="Test" type = "button" id = "btn" onclick = "Quiz0()"> QuizButton </button>
+    </div>
         
         <div class="fixed" id = "div"></div>
        <a href="https://forms.gle/sCLAGZSEfJ1sRg6f6" class="button-instructions">Sample Button</a>
