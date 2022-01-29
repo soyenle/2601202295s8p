@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>11 NewGodFlow</title>
+        <title>13 NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -85,13 +85,12 @@ function Quiz() {
     <body style="margin: auto; overflow: hidden;">
 	 
 	<div class="fixed" id = "div"></div>
-        <div class="buttons"><button class="button-quiz" type = "button" onclick = "Quiz()"> QuizButton </button></div>
-	<div class="button-instructions" onclick = "Instructions()"> Instructions</div>
 	    
-	<div class="buttons">
-     <button class="Test" type = "button" id = "btn" onclick = "Quiz()"> QuizButton </button>
-    </div>
-        
+        <div class="button-quiz"> <button class="button-quiz" type = "button" onclick = "Quiz()"> QuizButton </button></div>
+	    
+	<div class="button-instructions" type = "button" onclick = "Instructions()"> Instructions</div>
+	    
+
         
 	    
         <a-scene
