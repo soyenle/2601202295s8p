@@ -1,18 +1,16 @@
 <!doctype html>
 <html>
     <head>
-        <title> NewGodFlow</title>
+        <title> 2NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     </head>
     
-    <style>    
-      .fixed {
+ <style>    
+.content {
         margin: auto;
         width: 35%; 
         border: 3px solid green;
@@ -24,12 +22,13 @@
       }
 	    
 .button-quiz {
-  position: fixed;
-  bottom: 3%;
-  right: 2%;
+  	position: fixed;
+  	bottom: 3%;
+  	right: 2%;
         width: 30%;
 	height:4%;
         text-align: center;
+	justify-content: center;
         border: 3px solid grey;
         padding: 0.1%;
         border-radius: 5px;
@@ -37,13 +36,14 @@
 	z-index: 10;
 }
       
-  .button-instructions {
-  position: fixed;
-  bottom: 10%;
-  right: 2%;
+.button-instructions {
+  	position: fixed;
+  	bottom: 10%;
+  	right: 2%;
         width: 30%;
 	height:4%;
         text-align: center;
+	justify-content: center;
         border: 3px solid grey;
         padding: 0.1%;
         border-radius: 5px;
@@ -54,8 +54,8 @@
 	    
 </style>
     
-        <script>             
-        var ListeA = 'Zeichnungen Tag Apfelwein Lack Drehen Kiosk Abstimmung Abstimmung Hilfe Kopenhagen';
+<script>             
+        var ListeA = 'Zeichnungen Tag Apfelwein Lack Drehen Kiosk Abstimmung Hilfe Kopenhagen Stift';
 	var ListeB = 'Wurm Getreide Getreide Lotterie Niveau Hammer Sinn Karriere Fraktion Atlas Stiefschwester';
 	var ListeC = '1';
 	var ListeD = '2';
@@ -70,38 +70,33 @@
 	 if(document.querySelectorAll('a-marker')[2].object3D.visible == true) {document.getElementById("div").textContent = ListeC; } 
 	 if(document.querySelectorAll('a-marker')[3].object3D.visible == true) {document.getElementById("div").textContent = ListeD; } 
 	 if(document.querySelectorAll('a-marker')[4].object3D.visible == true) {document.getElementById("div").textContent = ListeE; } 
-
 	
 	 if(  (document.querySelectorAll('a-marker')[0].object3D.visible == false) && (document.querySelectorAll('a-marker')[1].object3D.visible == false)
 	   && (document.querySelectorAll('a-marker')[2].object3D.visible == false) && (document.querySelectorAll('a-marker')[3].object3D.visible == false) 
 	   && (document.querySelectorAll('a-marker')[4].object3D.visible == false)	) 
 	 {document.getElementById("div").textContent = ""; } 
-
-   }
-});
+	 }	
+	 });
             
 	
-function Instructions() {           
- window.alert("Lerne Alle Wörterlisten A-E für eine Minute und öffne anschließend das Quiz");
+	function Instructions() {           
+	window.alert("Lerne Alle Wörterlisten A-E für eine Minute und öffne anschließend das Quiz");
         }
 
-function Quiz() {           
-   window.open("https://forms.gle/sCLAGZSEfJ1sRg6f6");}      
+	function Quiz() {           
+   	window.open("https://forms.gle/sCLAGZSEfJ1sRg6f6");
+	}      
         
 </script>
     
     
     <body style="margin: auto; overflow: hidden;">
 	 
-	<div class="fixed" id = "div"></div>
-	    
-        <div class="button-quiz" type = "button" onclick = "Quiz()"> Quiz</div>
-	    
+	<div class="content" id = "div"></div>    
+        <div class="button-quiz" type = "button" onclick = "Quiz()"> Quiz</div>    
 	<div class="button-instructions" type = "button" onclick = "Instructions()"> Instructions</div>
 	    
-
-        
-	    
+    
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
