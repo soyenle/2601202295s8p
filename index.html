@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> 5NewGodFlow</title>
+        <title> NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -14,7 +14,7 @@
         position: fixed;
         background: #b3d6ff;
         border: 3px solid green;
-        bottom: 20%;
+        bottom: 10%;
         right: 5%;
         width: 80px;
         height: 80px;
@@ -22,6 +22,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+	z-index: 10;
     }
 
     .content {
@@ -33,6 +34,7 @@
         background: #73AD21;
         text-align: center;
         justify-content: center;
+	z-index: 10;
     }
 
     .button-quiz {
@@ -47,6 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+	z-index: 10;
     }
 
     .button-instructions {
@@ -61,8 +64,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+	z-index: 10;
     }
-    }
+    
 </style>
     
 <script>             
