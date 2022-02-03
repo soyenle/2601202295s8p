@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> NewGodFlow</title>
+        <title> NewGodFlow </title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -70,11 +70,10 @@
     
 <script>             
         var ListeA = 'Zeichnungen Tag Apfelwein Lack Drehen Kiosk Abstimmung Hilfe Kopenhagen Stift';
-	var ListeB = 'Wurm Getreide Getreide Lotterie Niveau Hammer Sinn Karriere Fraktion Atlas Stiefschwester';
-	var ListeC = '1';
-	var ListeD = '2';
-	var ListeE = '3';
-	
+	var ListeB = 'Wurm Getreide Kabine Lotterie Hammer Sinn Karriere Fraktion Atlas Kürbis';
+	var ListeC = 'Definition Torte Ski Kuhglocke Rhythmus Klavier Batterien Gefroren Lupe Kultur';
+	var ListeD = 'Gestern Pharao Graf Kellner Schlepper Tal Leopard Ende Kit Bushaltestelle';
+	var ListeE = 'Kabine Frosch Narbe Marmelade Singen Mutig Dreckig Slip Aussprechen Schnuller';
 	var visible = 0;
 		
          AFRAME.registerComponent('markerhandler', {
@@ -111,14 +110,15 @@
 	function countdown() {
 	visible = 1;
 	var timeleft = 60;
+		
 	var timer = setInterval(function() {
-    	if (timeleft <= 0) {
-        clearInterval(timer);
-	visible = 0;
-    	}
-    	document.getElementById("counter").textContent = timeleft;
-    	timeleft -= 1;
-	}, 1000); }
+    	    	if (timeleft <= 0) {
+			clearInterval(timer);
+			visible = 0;
+    			}
+    		document.getElementById("counter").textContent = timeleft;
+    		timeleft -= 1;
+		}, 1000); }
 	
 </script>
     
