@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> 2NewGodFlow</title>
+        <title> 3NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -9,64 +9,60 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     </head>
     
- <style>  
-.counter {
-  	position: fixed;	
-  	bottom: 20%;
-  	right: 2%;
+<style>
+    .counter {
+        position: fixed;
+        background: #b3d6ff;
+        border: 3px solid green;
+        bottom: 20%;
+        right: 2%;
         width: 40px;
-	height: 40px;
-        text-align: center;
-	justify-content: center;
-        border: 3px solid red;
-        padding: 0.1%;
+        height: 40px;
         border-radius: 50%;
-        background: #b3d6ff; 
-	z-index: 10;
-}
-	 
-.content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
         margin: auto;
-        width: 35%; 
+        width: 35%;
         border: 3px solid green;
         padding: 0.1%;
         border-radius: 30px;
         background: #73AD21;
         text-align: center;
         justify-content: center;
-      }
-	    
-.button-quiz {
-  	position: fixed;
-  	bottom: 3%;
-  	right: 2%;
+    }
+
+    .button-quiz {
+        position: fixed;
+        background: #b3d6ff;
+        border: 3px dashed grey;
+        bottom: 3%;
+        right: 2%;
         width: 30%;
-	height:4%;
-        text-align: center;
-	justify-content: center;
+        height: 4%;
+        border-radius: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-instructions {
+        position: fixed;
+        background: #b3d6ff;
         border: 3px solid grey;
-        padding: 0.1%;
-        border-radius: 5px;
-        background: #b3d6ff; 
-	z-index: 10;
-}
-      
-.button-instructions {
-  	position: fixed;
-  	bottom: 3%;
-  	left: 2%;
+        bottom: 3%;
+        left: 2%;
         width: 30%;
-	height:4%;
-        text-align: center;
-	justify-content: center;
-        border: 3px solid grey;
-        padding: 0.1%;
-        border-radius: 5px;
-        background: #b3d6ff; 
-	z-index: 10;
-}
-    
-	    
+        height: 4%;
+        border-radius: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    }
 </style>
     
 <script>             
@@ -97,7 +93,7 @@
             
 	
 	function Instructions() {           
-	window.alert("Lerne Alle Wörterlisten A-E für eine Minute und öffne anschließend das Quiz");
+	window.alert("Lerne Alle Wörterlisten A-E für eine Minute und öffne anschließend den Abfrage Test");
         }
 
 	function Quiz() {           
@@ -122,9 +118,9 @@
     <body style="margin: auto; overflow: hidden;">
 	 
 	<div class="content" id = "div"></div>    
-        <div class="button-quiz" type = "button" onclick = "Quiz()"> Quiz</div>    
+        <div class="button-quiz" type = "button" onclick = "Quiz()">Go To Test</div>    
 	<div class="button-instructions" type = "button" onclick = "Instructions()"> Instructions</div>
-	<div class="counter" id="counter"></div>    
+	<div class="counter" id="counter">0</div>    
     
         <a-scene
             vr-mode-ui="enabled: false;"
