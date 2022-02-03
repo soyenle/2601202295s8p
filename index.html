@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> NewGodFlow</title>
+        <title> 1NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -75,11 +75,12 @@
 	var ListeC = '1';
 	var ListeD = '2';
 	var ListeE = '3';
-
+	
+	var visible = 0;
 		
          AFRAME.registerComponent('markerhandler', {
          tock:function() {
-         if(document.querySelectorAll('a-marker')[0].object3D.visible == true) {countdown(); } 
+         if(document.querySelectorAll('a-marker')[0].object3D.visible == true && visible == 0) {countdown(); } 
 		 
          if(document.querySelectorAll('a-marker')[0].object3D.visible == true) {document.getElementById("div").textContent = ListeA; } 
 	 if(document.querySelectorAll('a-marker')[1].object3D.visible == true) {document.getElementById("div").textContent = ListeB; } 
@@ -104,10 +105,12 @@
 	}      
         
 	function countdown() {
+	visible = 1;
 	var timeleft = 60;
 	var timer = setInterval(function() {
     	if (timeleft <= 0) {
         clearInterval(timer);
+	visible = 0;
     	}
     	document.getElementById("counter").textContent = timeleft;
     	timeleft -= 1;
