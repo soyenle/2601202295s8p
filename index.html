@@ -13,16 +13,15 @@
     .counter {
         position: fixed;
         background: #b3d6ff;
-        border: 3px solid green;
+        border: 3px solid gray;
         bottom: 10%;
         right: 5%;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-	z-index: 10;
     }
 
     .content {
@@ -133,7 +132,7 @@
     
         <a-scene
             vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
+            loading-screen="enabled: true;"
             renderer="logarithmicDepthBuffer: true;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
