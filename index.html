@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> 6NewGodFlow</title>
+        <title> NewGodFlow</title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -79,7 +79,8 @@
 		
          AFRAME.registerComponent('markerhandler', {
          tock:function() {
-             
+         if(document.querySelectorAll('a-marker')[0].object3D.visible == true) {countdown(); } 
+		 
          if(document.querySelectorAll('a-marker')[0].object3D.visible == true) {document.getElementById("div").textContent = ListeA; } 
 	 if(document.querySelectorAll('a-marker')[1].object3D.visible == true) {document.getElementById("div").textContent = ListeB; } 
 	 if(document.querySelectorAll('a-marker')[2].object3D.visible == true) {document.getElementById("div").textContent = ListeC; } 
@@ -102,14 +103,16 @@
    	window.open("https://forms.gle/sCLAGZSEfJ1sRg6f6");
 	}      
         
-	var timeleft = 100;
-	var downloadTimer = setInterval(function() {
+	function countdown() {
+	var timeleft = 60;
+	var timer = setInterval(function() {
     	if (timeleft <= 0) {
-        clearInterval(downloadTimer);
+        clearInterval(timer);
     	}
     	document.getElementById("counter").textContent = timeleft;
     	timeleft -= 1;
-	}, 1000);
+	}, 1000); }
+	
 </script>
     
     
