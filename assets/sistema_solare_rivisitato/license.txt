@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sistema solare rivisitato
+* source:	https://sketchfab.com/3d-models/sistema-solare-rivisitato-26986cb9dec5487e8c8bf2ef53f54fd9
+* author:	braliacristina (https://sketchfab.com/braliacristina)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sistema solare rivisitato" (https://sketchfab.com/3d-models/sistema-solare-rivisitato-26986cb9dec5487e8c8bf2ef53f54fd9) by braliacristina (https://sketchfab.com/braliacristina) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
