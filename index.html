@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title> Marker-AR </title>
+        <title> 1Marker-AR </title>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -71,7 +71,8 @@
 	var ListeC = 'Hund, Katze, Ratte, Büffel, Drache, Schwein, Kaninchen, Schlange, Tiger, Affe';
 	var ListeD = 'Brasilien, Schwarzes Meer,  Kolumbien, Vietnam, Peru, Himalaya, Ghana, Schweiz, Mongolei, Machu Picchu';
 	var ListeE = 'Baktereophage, Photosynthese, Calcium, Zellkern, Mitochondrium, Nukleus, Virus, DNA, Zellteilung, Skelett, Hydrogen';
-	var visible = 0;
+	
+	//var visible = 0;
 		
          AFRAME.registerComponent('markerhandler', {
          tock:function() {
@@ -167,7 +168,7 @@
 			  rotation="270 0 0"
                     scale="0.4 0.4 0.4"
                     animation-mixer="loop: repeat"
-                    gltf-model="assets/asset.gltf"
+                    gltf-model="#animated-asset"
                     class="clickable"
                     gesture-handler
                 ></a-entity>  
