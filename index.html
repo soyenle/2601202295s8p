@@ -66,7 +66,7 @@
 </style>
     
 <script>             
-        var ListeA = 'Da Vinci, Beethoven,  Picasso, Van Gogh, Mozart,  Göthe, Schiller, Dali, Michelangelo, Chopin';
+        var ListeA = 'Die hier erscheinenen Wörter in Richtiger Reihenfolge lernen';
 	var ListeB = 'Burger King, Apfel, Birne, Banane, Pommes,  Litschi, Avocado, Salz, Chicken Wings';
 	var ListeC = 'Hund, Katze, Ratte, Büffel, Drache, Schwein, Kaninchen, Schlange, Tiger, Affe';
 	var ListeD = 'Brasilien, Schwarzes Meer,  Kolumbien, Vietnam, Peru, Himalaya, Ghana, Schweiz, Mongolei, Machu Picchu';
@@ -122,11 +122,16 @@
     <body style="margin: auto; overflow: hidden;">
 	 
 	<div class="content" id = "div"></div>    
-        <div class="button-quiz" type = "button" onclick = "Quiz()">Go To Test</div>    
+       
+	    
+	<!--------- UI init Für Quiz/Instruction/Timer-----
+	<div class="button-quiz" type = "button" onclick = "Quiz()">Go To Test</div>    
 	<div class="button-instructions" type = "button" onclick = "Instructions()"> Instructions</div>
 	<div class="counter" id="counter">0</div>    
-    
-        <a-scene
+   	 ------>
+        
+	    
+	    <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
@@ -159,7 +164,7 @@
 			  rotation="270 0 0"
                     scale="0.4 0.4 0.4"
                     animation-mixer="loop: repeat"
-                    gltf-model="assets/mona_lisa_painting/scene.gltf"
+                    gltf-model="assets/asset.gltf"
                     class="clickable"
                     gesture-handler
                 ></a-entity>  
