@@ -23,7 +23,8 @@
 	z-index: 10;
     }
 	
-/*
+/* Some Buttons for UI and instructions 
+	
     .counter {
         position: fixed;
         background: #b3d6ff;
@@ -70,18 +71,22 @@
 	
 </style>
     
-<script>             
+<script> 
+	
+	// List of Words that were used for the study 
         var ListeA = 'Da Vinci, Beethoven,  Picasso, Van Gogh, Mozart,  Göthe, Schiller, Dali, Michelangelo, Chopin';
 	var ListeB = 'Burger King, Apfel, Birne, Banane, Pommes,  Litschi, Avocado, Salz, Chicken Wings';
 	var ListeC = 'Hund, Katze, Ratte, Büffel, Drache, Schwein, Kaninchen, Schlange, Tiger, Affe';
 	var ListeD = 'Brasilien, Schwarzes Meer,  Kolumbien, Vietnam, Peru, Himalaya, Ghana, Schweiz, Mongolei, Machu Picchu';
 	var ListeE = 'Baktereophage, Photosynthese, Calcium, Zellkern, Mitochondrium, Nukleus, Virus, DNA, Zellteilung, Skelett, Hydrogen';
 	
-	//var visible = 0;
+	// variable to check whether timer was already triggered
+	//var visible = 0; 
 		
          AFRAME.registerComponent('markerhandler', {
          tock:function() {
-		 
+	
+	// Start countdown if object is seen
         /*  if(visible == 0 && 
 	    (document.querySelectorAll('a-marker')[0].object3D.visible == true || 
 	     document.querySelectorAll('a-marker')[1].object3D.visible == true ||
@@ -89,7 +94,9 @@
 	     document.querySelectorAll('a-marker')[3].object3D.visible == true ||
 	     document.querySelectorAll('a-marker')[4].object3D.visible == true) ) {countdown(); } 
 	  */ 
+	
 		 
+	// If marker/object is visible, show the related Wordlist	 
          if(document.querySelectorAll('a-marker')[0].object3D.visible == true) {document.getElementById("div").textContent = ListeA; } 
 	 if(document.querySelectorAll('a-marker')[1].object3D.visible == true) {document.getElementById("div").textContent = ListeB; } 
 	 if(document.querySelectorAll('a-marker')[2].object3D.visible == true) {document.getElementById("div").textContent = ListeC; } 
@@ -104,6 +111,7 @@
 	 });
             
 	/*
+	// Button functions
 	function Instructions() {           
 	window.alert("Lerne Alle Wörterlisten A-E für eine Minute und öffne anschließend den Abfrage Test");
         }
@@ -111,6 +119,8 @@
    	window.open("https://forms.gle/sCLAGZSEfJ1sRg6f6");
 	}      
         
+	
+	//Countdown for 1 Minute, used for Study
 	function countdown() {
 	visible = 1;
 	var timeleft = 60;
